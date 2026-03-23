@@ -9,7 +9,9 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(express.static(__dirname));
+app.get("/", (req, res) => {
+  res.send("Medisync API running 🚀");
+});
 app.use(cors());
 
 
